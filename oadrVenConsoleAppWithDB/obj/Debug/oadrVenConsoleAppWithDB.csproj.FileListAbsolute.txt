@@ -1,0 +1,6 @@
+c:\users\nick\documents\visual studio 2017\Projects\oadrVenConsoleAppWithDB\oadrVenConsoleAppWithDB\bin\Debug\oadrVenConsoleAppWithDB.exe.config
+c:\users\nick\documents\visual studio 2017\Projects\oadrVenConsoleAppWithDB\oadrVenConsoleAppWithDB\bin\Debug\oadrVenConsoleAppWithDB.exe
+c:\users\nick\documents\visual studio 2017\Projects\oadrVenConsoleAppWithDB\oadrVenConsoleAppWithDB\bin\Debug\oadrVenConsoleAppWithDB.pdb
+c:\users\nick\documents\visual studio 2017\Projects\oadrVenConsoleAppWithDB\oadrVenConsoleAppWithDB\obj\Debug\oadrVenConsoleAppWithDB.csprojResolveAssemblyReference.cache
+c:\users\nick\documents\visual studio 2017\Projects\oadrVenConsoleAppWithDB\oadrVenConsoleAppWithDB\obj\Debug\oadrVenConsoleAppWithDB.exe
+c:\users\nick\documents\visual studio 2017\Projects\oadrVenConsoleAppWithDB\oadrVenConsoleAppWithDB\obj\Debug\oadrVenConsoleAppWithDB.pdb

@@ -1,0 +1,24 @@
+Begin Main...
+No Command Args
+Connection String = [http://172.16.25.51:8080/OpenADR2/Simple/2.0b::Test_VEN_Name::6f130342def6d658567c::]
+
+Starting New main console thread:
+Implement function:: setVENParameters
+Implement function:: processUpdateStatus
+Implement function:: processUpdateStatus
+Implement function:: processUpdateStatus
+Implement function:: processQueryRegistration
+Implement function:: processCreatePartyRegisteration
+Implement function:: processRegisterReport
+Implement function:: processRequestEvent
+Implement function:: processCreatedEvent
+Implement function:: processPoll
+Implement function:: processRegisteredReport
+Implement function:: processPoll
+Implement function:: processUpdateStatus
+Implement function:: processRegisterReport
+startPoll
+Implement function:: updateError
+Implement function:: processUpdateStatus
+stopPoll
+quit

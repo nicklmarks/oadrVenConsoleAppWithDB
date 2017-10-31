@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{086C7225-C8E3-4DEB-A979-1D363406B6BB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>oadrVenConsoleAppWithDB</RootNamespace>
+    <AssemblyName>oadrVenConsoleAppWithDB</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\DefaultCommands.cs" />
+    <Compile Include="Commands\OadrCommands.cs" />
+    <Compile Include="Commands\Users.cs" />
+    <Compile Include="ConsoleCommand.cs" />
+    <Compile Include="ConsoleFormatting.cs" />
+    <Compile Include="consoleMain.cs" />
+    <Compile Include="OptUpdate.cs" />
+    <Compile Include="UpdateOptEventArgs.cs" />
+    <Compile Include="UserControls\Events\IEvents.cs" />
+    <Compile Include="UserControls\OptSchedule\IManageOptSchedules.cs" />
+    <Compile Include="UserControls\OptSchedule\oadrOptScheduleModel.cs" />
+    <Compile Include="UserControls\OptSchedule\OptScheduleModel.cs" />
+    <Compile Include="UserControls\QueryRegistration\IQueryRegistration.cs" />
+    <Compile Include="UserControls\Reports\IucCreateReport.cs" />
+    <Compile Include="UserControls\Resources\IManageResources.cs" />
+    <Compile Include="UserControls\Resources\UI\IucResource.cs" />
+    <Compile Include="ven\IVenWrapper.cs" />
+    <Compile Include="lib\helper\Logger.cs" />
+    <Compile Include="lib\helper\OadrCertificatePolicy.cs" />
+    <Compile Include="lib\helper\OadrObjectFactory.cs" />
+    <Compile Include="lib\helper\OadrRequest.cs" />
+    <Compile Include="lib\helper\StringWriterWithEncoding.cs" />
+    <Compile Include="lib\helper\VEN.cs" />
+    <Compile Include="lib\http\HttpSecuritySettings.cs" />
+    <Compile Include="lib\http\HttpWebRequestWrapper.cs" />
+    <Compile Include="lib\http\IHttp.cs" />
+    <Compile Include="lib\oadr20a\CreatedEvent.cs" />
+    <Compile Include="lib\oadr20a\oadr_20a_oadr_ei_20a_oadr_emix_20a_oadr_pyld_20a_oadr_strm_20a_oadr_xcal_20a.cs" />
+    <Compile Include="lib\oadr20a\RequestEvent.cs" />
+    <Compile Include="lib\oadr20a\VEN2a.cs" />
+    <Compile Include="lib\oadr20b\CanceledPartyRegistration.cs" />
+    <Compile Include="lib\oadr20b\CanceledReport.cs" />
+    <Compile Include="lib\oadr20b\CancelOpt.cs" />
+    <Compile Include="lib\oadr20b\CancelPartyRegistration.cs" />
+    <Compile Include="lib\oadr20b\CreatedEvent.cs" />
+    <Compile Include="lib\oadr20b\CreatedEventHelper.cs" />
+    <Compile Include="lib\oadr20b\CreatedReport.cs" />
+    <Compile Include="lib\oadr20b\CreateOpt.cs" />
+    <Compile Include="lib\oadr20b\CreatePartyRegistration.cs" />
+    <Compile Include="lib\oadr20b\DataQuality.cs" />
+    <Compile Include="lib\oadr20b\DurationModifier.cs" />
+    <Compile Include="lib\oadr20b\oadr20b.cs" />
+    <Compile Include="lib\oadr20b\OadrPoll.cs" />
+    <Compile Include="lib\oadr20b\OadrRequest2b.cs" />
+    <Compile Include="lib\oadr20b\OptSchedule.cs" />
+    <Compile Include="lib\oadr20b\QueryRegistration.cs" />
+    <Compile Include="lib\oadr20b\RegisteredReport.cs" />
+    <Compile Include="lib\oadr20b\RegisterReport.cs" />
+    <Compile Include="lib\oadr20b\ReportDescription.cs" />
+    <Compile Include="lib\oadr20b\ReportInterval.cs" />
+    <Compile Include="lib\oadr20b\ReportName.cs" />
+    <Compile Include="lib\oadr20b\ReportWrapper.cs" />
+    <Compile Include="lib\oadr20b\RequestEvent.cs" />
+    <Compile Include="lib\oadr20b\UpdateReport.cs" />
+    <Compile Include="lib\oadr20b\VEN2b.cs" />
+    <Compile Include="lib\RandomHex.cs" />
+    <Compile Include="Models\SampleData.cs" />
+    <Compile Include="ven\OadrCommand.cs" />
+    <Compile Include="ven\OadrCommandCreateOptSchedule.cs" />
+    <Compile Include="ven\OadrEventWrapper.cs" />
+    <Compile Include="ven\ProcessEvents.cs" />
+    <Compile Include="ven\ProcessOptSchedules.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="schema\oadr_20a\VEN.cs" />
+    <Compile Include="ven\resources\Interval.cs" />
+    <Compile Include="ven\resources\IntervalEnergy.cs" />
+    <Compile Include="ven\resources\IntervalPower.cs" />
+    <Compile Include="ven\resources\IntervalStatus.cs" />
+    <Compile Include="ven\resources\IntervalValue.cs" />
+    <Compile Include="ven\resources\ISendReport.cs" />
+    <Compile Include="ven\resources\PowerValue.cs" />
+    <Compile Include="ven\resources\ReportHandler.cs" />
+    <Compile Include="ven\resources\ReportRequestWrapper.cs" />
+    <Compile Include="ven\resources\Resource.cs" />
+    <Compile Include="ven\resources\ResourceGenerator.cs" />
+    <Compile Include="ven\resources\ResourceLoad.cs" />
+    <Compile Include="ven\resources\Resources.cs" />
+    <Compile Include="ven\resources\ResourceStorage.cs" />
+    <Compile Include="ven\resources\StatusValue.cs" />
+    <Compile Include="ven\signal\ExceptionInvalidSignal.cs" />
+    <Compile Include="ven\signal\OadrSignal.cs" />
+    <Compile Include="ven\signal\OadrSignalBidEnergy.cs" />
+    <Compile Include="ven\signal\OadrSignalBidLoad.cs" />
+    <Compile Include="ven\signal\OadrSignalBidPrice.cs" />
+    <Compile Include="ven\signal\OadrSignalChargeState.cs" />
+    <Compile Include="ven\signal\OadrSignalCustom.cs" />
+    <Compile Include="ven\signal\OadrSignalDemandCharge.cs" />
+    <Compile Include="ven\signal\OadrSignalElectricityPrice.cs" />
+    <Compile Include="ven\signal\oadrSignalEnergyPrice.cs" />
+    <Compile Include="ven\signal\OadrSignalLoadControl.cs" />
+    <Compile Include="ven\signal\OadrSignalLoadDispatch.cs" />
+    <Compile Include="ven\signal\OadrSignals.cs" />
+    <Compile Include="ven\signal\OadrSignalSimple.cs" />
+    <Compile Include="ven\signal\RangeChecker.cs" />
+    <Compile Include="ven\signal\RangeCheckerAny.cs" />
+    <Compile Include="ven\signal\RangeCheckerInteger.cs" />
+    <Compile Include="ven\signal\RangeCheckerList.cs" />
+    <Compile Include="ven\signal\RangeCheckerMinMax.cs" />
+    <Compile Include="ven\signal\RangeCheckerPercent.cs" />
+    <Compile Include="ven\signal\ValidateUnits.cs" />
+    <Compile Include="ven\VenEventArgs.cs" />
+    <Compile Include="ven\VenWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="schema\oadr_20a\oadr_20a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_20a\oadr_ei_20a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_20a\oadr_emix_20a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_20a\oadr_pyld_20a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_20a\oadr_strm_20a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_20a\oadr_xcal_20a.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_atom.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_ei_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_emix_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_gml_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_greenbutton.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_ISO_ISO3AlphaCurrencyCode_20100407.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_power_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_pyld_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_siscale_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_strm_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_xcal_20b.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_xml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_xmldsig-properties-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_xmldsig.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schema\oadr_xmldsig11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\Log\" />
+    <Folder Include="UserControls\OadrLists\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
