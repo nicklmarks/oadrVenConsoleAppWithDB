@@ -44,7 +44,7 @@ using System.Configuration;
 
 namespace oadrVenConsoleAppWithDB
 {
-    class Program   /// : IVenWrapper  // ??? Can Main Inherit?
+    class Program   // : IVenWrapper  // ??? Can Main Inherit?
     {
         //VEN2b ven2b;
 
@@ -125,7 +125,7 @@ namespace oadrVenConsoleAppWithDB
             string loggingString = "Create new queryRegistration\n";
             Logger.logMessage( DateTime.Now + loggingString + "\n", "logger.log");
 
-//            oadrlib.lib.oadr2b.QueryRegistration queryRegistration = ven2b.queryRegistration();
+            oadrlib.lib.oadr2b.QueryRegistration queryRegistration = ven2b.queryRegistration();
             int poll_interval = 10;  // ??queryRegistration.poll_Int??
 // *** TODO:: Pull Poll interval from queryRegistration.responseBody  *** 
 // oadrCreatedPartyRegistrationType (VTN INFO)
@@ -183,11 +183,13 @@ System.Threading.Thread.Sleep(5000);
             Logger.logMessage( DateTime.Now +  "\n\n", "requestEvent.log");
             //Logger.logMessage( DateTime.Now +  requestEvent.requestBody.ToString());
 
-System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(10000);
 
 
-            oadrlib.lib.oadr2b.RequestEvent requestEvent = ven2b.requestEvent();
-            
+            /*
+            //            oadrlib.lib.oadr2b.RequestEvent requestEvent = ven2b.requestEvent();
+            requestEvent = requestEvent.createOadrRequestEvent(string venID, uint replyLimit = 0, string requestID = "")
+
             Logger.logMessage( DateTime.Now +  "\nRequest Event Request Body:: \n", "requestEvent.log");
             Logger.logMessage( DateTime.Now +  requestEvent.requestBody, "requestEvent.log");
             Logger.logMessage( DateTime.Now +  "\nRequest Event Response Body:: \n", "requestEvent.log");
@@ -195,18 +197,21 @@ System.Threading.Thread.Sleep(10000);
             Logger.logMessage( DateTime.Now +  "\n\n", "requestEvent.log");
             //Logger.logMessage( DateTime.Now +  requestEvent.requestBody.ToString());
 
-System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(10000);
+
+            */
 
 
-// VEN->VTN  
-// VEN<-VTN  
-// SLEEP
+
+            // VEN->VTN  
+            // VEN<-VTN  
+            // SLEEP
 
 
-// Loop Options for Pull Method. Pull Polls VTN and Awaits Response during INTERVAL
-// VEN->VTN  oadrPoll
-// VEN<-VTN  oadrResponse OR oadrDistributeEvent OR oadrCreateReport OR oadrRegisterReport OR oadrCancelReport OR oadrUpdateReport OR oadrCancelPartyRegistration OR oadrRequestReregistration
-// SLEEP
+            // Loop Options for Pull Method. Pull Polls VTN and Awaits Response during INTERVAL
+            // VEN->VTN  oadrPoll
+            // VEN<-VTN  oadrResponse OR oadrDistributeEvent OR oadrCreateReport OR oadrRegisterReport OR oadrCancelReport OR oadrUpdateReport OR oadrCancelPartyRegistration OR oadrRequestReregistration
+            // SLEEP
 
 
             //BEGIN-Loop  (Request/Response Options)
@@ -218,55 +223,55 @@ System.Threading.Thread.Sleep(10000);
             // Sleep (Interval)
 
 
-// VEN->VTN  
-// VEN<-VTN  
-// SLEEP
+            // VEN->VTN  
+            // VEN<-VTN  
+            // SLEEP
 
-/**   //DEBUG
-        
-        private const string STATUS_SHUTDOWN = "Shutting down...";
-        private const string VEN_NOT_REGISTERED = "VEN NOT Registered";
-        private const string VEN_REGISTERED = "VEN IS Registered";
+            /**   //DEBUG
+                    
+                    private const string STATUS_SHUTDOWN = "Shutting down...";
+                    private const string VEN_NOT_REGISTERED = "VEN NOT Registered";
+                    private const string VEN_REGISTERED = "VEN IS Registered";
 
-        private bool m_running = false;
+                    private bool m_running = false;
 
-        private VenWrapper m_venWrapper;
-
-
-            m_venWrapper = new VenWrapper(ven2b, this);
-            setVENParameters();
-
-            m_venWrapper.queryRegistration();
-
-            m_venWrapper.register();
-
-            m_venWrapper.registerReports();
-
-            m_venWrapper.startPolling();
-            
-            // StartConsole();
-            
-            m_venWrapper.stopPolling();
-
-            m_venWrapper.shutdown();
+                    private VenWrapper m_venWrapper;
 
 
-**/
+                        m_venWrapper = new VenWrapper(ven2b, this);
+                        setVENParameters();
 
-/**
-  //REMOVE AND REPLACE
+                        m_venWrapper.queryRegistration();
+
+                        m_venWrapper.register();
+
+                        m_venWrapper.registerReports();
+
+                        m_venWrapper.startPolling();
+                        
+                        // StartConsole();
+                        
+                        m_venWrapper.stopPolling();
+
+                        m_venWrapper.shutdown();
+
+
+            **/
+
+            /**
+              //REMOVE AND REPLACE
 //                    startConsole(ven2b);
 //        static void startConsole(VEN2b ven2b)
 //        {
 //            consoleMain console = new consoleMain(ven2b);
 //        }
-        
-        // ** Start Adding consoleMain Functionality
-        
+                    
+                    // ** Start Adding consoleMain Functionality
+                    
 
-       
+                   
 //       Logger.logMessage( "Log queryRegistration responseBody:: \n" + queryRegistration.responseBody + "\n", "logger.log");
-**/
+            **/
 
             return;
         }
@@ -284,10 +289,10 @@ System.Threading.Thread.Sleep(10000);
                 try
                 {
                     // Create a ConsoleCommand instance:
-//                    var cmd = new ConsoleCommand(consoleInput);
+                    //                    var cmd = new ConsoleCommand(consoleInput);
 
                     // Execute the command:
-//                    string result = Execute(cmd);
+                    string result = ""; // Execute(cmd);
 
                     // Write out the result:
 //                    WriteToConsole(result);

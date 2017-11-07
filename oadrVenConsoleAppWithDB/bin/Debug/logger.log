@@ -1,0 +1,57 @@
+11/7/2017 12:49:03 PMBegin Main...
+11/7/2017 12:49:03 PMNo Command Line Args Passed...
+11/7/2017 12:49:03 PMConnection String = [http://172.16.25.51:8080/OpenADR2/Simple/2.0b::Test_VEN_Name::6f130342def6d658567c::]
+11/7/2017 12:49:03 PMCreate new queryRegistration
+
+11/7/2017 12:49:07 PMLog queryRegistration requestBody:: 
+<?xml version="1.0" encoding="utf-8"?>
+<oadrPayload xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://openadr.org/oadr-2.0b/2012/07">
+  <oadrSignedObject>
+    <oadrQueryRegistration d3p1:schemaVersion="2.0b" xmlns:d3p1="http://docs.oasis-open.org/ns/energyinterop/201110">
+      <requestID xmlns="http://docs.oasis-open.org/ns/energyinterop/201110/payloads">fe2dc1b1fc</requestID>
+    </oadrQueryRegistration>
+  </oadrSignedObject>
+</oadrPayload>
+11/7/2017 12:49:07 PMLog queryRegistration responseBody:: 
+<?xml version="1.0" encoding="utf-8"?>
+<oadrPayload xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://openadr.org/oadr-2.0b/2012/07">
+  <oadrSignedObject>
+    <oadrCreatedPartyRegistration d3p1:schemaVersion="2.0b" xmlns:d3p1="http://docs.oasis-open.org/ns/energyinterop/201110">
+      <d3p1:eiResponse>
+        <d3p1:responseCode>200</d3p1:responseCode>
+        <d3p1:responseDescription>OK</d3p1:responseDescription>
+        <requestID xmlns="http://docs.oasis-open.org/ns/energyinterop/201110/payloads">fe2dc1b1fc</requestID>
+      </d3p1:eiResponse>
+      <d3p1:registrationID />
+      <d3p1:venID />
+      <d3p1:vtnID>EPRI_VTN</d3p1:vtnID>
+      <oadrProfiles>
+        <oadrProfile>
+          <oadrProfileName>2.0a</oadrProfileName>
+          <oadrTransports>
+            <oadrTransport>
+              <oadrTransportName>simpleHttp</oadrTransportName>
+            </oadrTransport>
+            <oadrTransport>
+              <oadrTransportName>xmpp</oadrTransportName>
+            </oadrTransport>
+          </oadrTransports>
+        </oadrProfile>
+        <oadrProfile>
+          <oadrProfileName>2.0b</oadrProfileName>
+          <oadrTransports>
+            <oadrTransport>
+              <oadrTransportName>simpleHttp</oadrTransportName>
+            </oadrTransport>
+            <oadrTransport>
+              <oadrTransportName>xmpp</oadrTransportName>
+            </oadrTransport>
+          </oadrTransports>
+        </oadrProfile>
+      </oadrProfiles>
+      <oadrRequestedOadrPollFreq>
+        <duration xmlns="urn:ietf:params:xml:ns:icalendar-2.0">PT10S</duration>
+      </oadrRequestedOadrPollFreq>
+    </oadrCreatedPartyRegistration>
+  </oadrSignedObject>
+</oadrPayload>
